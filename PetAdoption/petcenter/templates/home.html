@@ -1,3 +1,5 @@
+{% load crispy_forms_tags %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,5 +8,20 @@
 <body>
     <h1>Welcome to the Pet Adoption Centre</h1>
     <p>Find your perfect pet companion today!</p>
+    <form method="POST">
+        {% csrf_token %}
+        {{pform|crispy}}
+        <button type="submit">Submit</button>
+    </form>
+
+    <div>
+        
+        {% for pets in allp %}
+        <ul>
+            <li>{{pets.name}}</li>
+        </ul>
+        {% endfor %}
+        
+    </div>
 </body>
 </html>

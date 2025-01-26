@@ -19,7 +19,8 @@ class Pet(models.Model):
     size = models.CharField(max_length=1, choices=SIZE_CHOICES)
     color = models.CharField(max_length=50)
     weight = models.PositiveSmallIntegerField()
-    photos = models.ImageField(upload_to='pets/')
+    photos = models.ImageField(upload_to='pets/', null=True, blank=True)
+    time_added = models.DateTimeField(auto_now_add=True, null=True, blank=True)
     
     def __str__(self):
         return self.name

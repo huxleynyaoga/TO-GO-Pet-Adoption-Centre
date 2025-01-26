@@ -1,4 +1,5 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from .forms import *
 
 from rest_framework import viewsets, filters
 from rest_framework.decorators import action
@@ -48,5 +49,18 @@ class PetAdoptionViewSet(viewsets.ModelViewSet):
 
 
 def home(request):
-    return render(request, 'home.html')
-    
+    allpets = Pet.objects.all()
+    if request.method == "POST":
+        form = PetForm(data=request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('home')
+    else:
+        form = PetForm()
+        
+    context = {
+        'pform':form,
+        'allp':allpets,
+        }
+    return render(request, 'home.html', context)
+
