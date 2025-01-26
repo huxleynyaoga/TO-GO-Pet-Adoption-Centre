@@ -8,8 +8,8 @@ class PetAdmin(admin.ModelAdmin):
     search_fields = ["name"]
     
     
-class PetAppearnaceAdmin(admin.ModelAdmin):
-    list_display = ["pet", "color", "weight"]
+# class PetAppearnaceAdmin(admin.ModelAdmin):
+#     list_display = ["pet", "color", "weight"]
     
     
 class PetHealthAdmin(admin.ModelAdmin):
@@ -25,7 +25,7 @@ class PetAdoptionAdmin(admin.ModelAdmin):
     
     
 admin.site.register(Pet, PetAdmin)
-admin.site.register(PetAppearnace, PetAppearnaceAdmin)
+# admin.site.register(PetAppearnace, PetAppearnaceAdmin)
 admin.site.register(PetHealth, PetHealthAdmin)
 admin.site.register(PetBehaviour, PetBehaviourAdmin)
 admin.site.register(PetAdoption, PetAdoptionAdmin)

@@ -17,6 +17,9 @@ class Pet(models.Model):
     breed = models.CharField(max_length=50)
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
     size = models.CharField(max_length=1, choices=SIZE_CHOICES)
+    color = models.CharField(max_length=50)
+    weight = models.PositiveSmallIntegerField()
+    photos = models.ImageField(upload_to='pets/')
     
     def __str__(self):
         return self.name
@@ -24,15 +27,15 @@ class Pet(models.Model):
     
     
 
-#Pet Appearance 
-class PetAppearnace(models.Model):
-    pet = models.ForeignKey(Pet, on_delete=models.CASCADE)
-    color = models.CharField(max_length=50)
-    weight = models.PositiveSmallIntegerField()
-    photos = models.ImageField(upload_to='pets/')
+# #Pet Appearance 
+# class PetAppearnace(models.Model):
+#     pet = models.ForeignKey(Pet, on_delete=models.CASCADE)
+#     color = models.CharField(max_length=50)
+#     weight = models.PositiveSmallIntegerField()
+#     photos = models.ImageField(upload_to='pets/')
     
-    def __str__(self):
-        return f'{self.pet} - {self.color}'
+#     def __str__(self):
+#         return f'{self.pet} - {self.color}'
     
     
 #Pet Health Information
