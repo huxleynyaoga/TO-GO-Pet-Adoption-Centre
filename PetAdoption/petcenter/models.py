@@ -15,12 +15,13 @@ class Pet(models.Model):
     age = models.PositiveSmallIntegerField()
     species = models.CharField(max_length=50)
     breed = models.CharField(max_length=50)
+    description = models.TextField(max_length=250)
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES)
     size = models.CharField(max_length=1, choices=SIZE_CHOICES)
     color = models.CharField(max_length=50)
     weight = models.PositiveSmallIntegerField()
-    photos = models.ImageField(upload_to='pets/', null=True, blank=True)
-    time_added = models.DateTimeField(auto_now_add=True, null=True, blank=True)
+    photos = models.ImageField(upload_to='pets/')
+    time_added = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
         return self.name
