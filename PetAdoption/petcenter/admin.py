@@ -3,7 +3,7 @@ from .models import *
 
 
 class PetAdmin(admin.ModelAdmin):
-    list_display = ["name", "age", "species", "breed", "gender", "size"]
+    list_display = ["name", "age", "species", "breed", "gender", "size", 'description']
     list_filter = ["breed"]
     search_fields = ["name"]
     
