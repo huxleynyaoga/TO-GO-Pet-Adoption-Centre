@@ -7,7 +7,9 @@ import Contact from "./components/pages/Contact";
 import PetDetailss from "./components/pages/PetDetails";
 import WishList from "./components/pages/WishList";
 import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css"; // Ensure you import the CSS
+import Donate from "./components/pages/Donate";
+import "react-toastify/dist/ReactToastify.css"; 
+import Adoption from "./components/pages/Adoption";
 
 const App: React.FC = () => {
   return (
@@ -25,6 +27,8 @@ const App: React.FC = () => {
           <Route path="/petlisting" element={<PetListing />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/petdetail/:id" element={<PetDetailss />} />
+          <Route path="/adopt" element={<Adoption />} />
+          <Route path="/donate" element={<Donate />} />
         </Routes>
       </Router>
     </>
@@ -32,3 +36,4 @@ const App: React.FC = () => {
 };
 
 export default App;
+ 

@@ -15,7 +15,7 @@ const PetListing:React.FC= () => {
             </div>
 
   return (
-<section className="min-h-screen flex flex-col">
+<section className="min-h-screen flex flex-col bg-[#F8F6F6]">
 <Header />
 <section
          className="w-full  h-[498px]  bg-cover bg-center"
@@ -25,6 +25,8 @@ const PetListing:React.FC= () => {
             backgroundSize: "cover",
           }}
         >
+        
+        
             <div className="  h-full  flex flex-col justify-center m-4  items-center">
             <h1 className="text-3xl md:leading-14 leading-10 max-w-[550px] text-blue-600  md:text-5xl font-bold md:mb-8 mb-3">
             Meet Your Best Friend 
@@ -41,7 +43,9 @@ const PetListing:React.FC= () => {
                 
             />
             </div>
+            
             </div>
+            
 
 
             </section>

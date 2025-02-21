@@ -106,7 +106,7 @@ const PetDetailss=()=>{
     };
     if (!savedPets.some((p: { id: string }) => p.id === newPet.id)) {
         const updatedPets = [...savedPets, newPet];
-        localStorage.setItem("pets", JSON.stringify(updatedPets)); // Save immediately
+        localStorage.setItem("pets", JSON.stringify(updatedPets));
         showToastMessage("🦄 Pet added to wishlist!"); 
         
 } else{

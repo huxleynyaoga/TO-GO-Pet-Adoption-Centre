@@ -99,6 +99,8 @@ description:"When we first met Bella at the adoption center, she was shy and hes
             backgroundSize: "cover",
           }}
         >
+           <div className="absolute inset-0 bg-black bg-opacity-30"></div>
+           <div className="relative z-10 text-white h-full">
           <div className="  h-full   flex flex-col justify-center items-center   md:items-start text-center">
             <h1 className="text-3xl md:leading-14 leading-10 max-w-[550px] text-white  md:text-5xl font-bold mb-8">
               Find Love, Save Life Make a Difference
@@ -107,6 +109,7 @@ description:"When we first met Bella at the adoption center, she was shy and hes
               <Button buttonLabel="Adpot " backgroundColor="blue" buttonSize="text-lg" action={()=>navigate("/petlisting")} />
               <Button buttonLabel="Donate" backgroundColor="purple" buttonSize="text-lg" />
             </div>
+          </div>
           </div>
         </section>
 
