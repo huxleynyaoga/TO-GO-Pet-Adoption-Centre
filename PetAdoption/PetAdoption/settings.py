@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-^2%sok1*jkc-b2@%fp@sj$%^a$47nfm&kxct59*2sup!w9x^tr
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'crispy_forms',
     "crispy_bootstrap4",
+    # 'corsheaders',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
@@ -59,8 +60,14 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
-CORS_ALLOW_ALL_ORIGINS = True 
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",  # React frontend
+]
+
+# CORS_ALLOW_ALL_ORIGINS = True 
 
 ROOT_URLCONF = 'PetAdoption.urls'
 
